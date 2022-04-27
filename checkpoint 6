@@ -1,0 +1,29 @@
+struct Car {
+    let model: String
+    let seats: Int
+    private(set) var gear = Int.random(in: 1...10)
+    
+    mutating func changeGearUp() {
+        if gear == 10 {
+            print("It is maximum.")
+        } else if gear < 10 && gear > 0 {
+            print("The current gear is \(gear)")
+            gear += 1
+            print("Changed to \(gear).")
+        }
+    }
+        mutating func changeGearDown() {
+            if gear == 1 {
+                print("We're already too slow, mate.")
+            } else if gear > 0 && gear <= 10 {
+                print("The current gear is \(gear)")
+                gear -= 1
+                print("Changed to \(gear).")
+            }
+        }
+    }
+    
+
+var mercedes = Car(model: "Mecedes Benz", seats: 4)
+mercedes.changeGearDown()
+
