@@ -1,7 +1,7 @@
 protocol Building {
-    var name: String { get set}
+    var name: String { get }
     var cost: Int {get set}
-    var agent: String {get set}
+    var agent: String { get }
     
     func printSummary()
     }
